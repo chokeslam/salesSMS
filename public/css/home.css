@@ -1,0 +1,17 @@
+
+/*#test{
+
+	min-height:290px;
+
+	overflow-y:auto;
+
+	max-height:290px;
+}*/
+/*#tables {
+    
+    table-layout: fixed;
+}*/
+
+.bottom{
+	text-align: right;
+}
