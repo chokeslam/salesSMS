@@ -21,6 +21,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('home/paid', 'HomeController@paid')->name('paid');
 Route::get('home/unpaid', 'HomeController@unpaid')->name('paid');
 Route::get('home/sign-up', 'HomeController@signup')->name('signup');
+//Route::get('register', 'HomeController@register')->name('register');
+//Route::POST('register', 'HomeController@register_create')->name('register_create');
 
 Route::get('create', 'HomeController@create')->name('create');
 Route::post('create/new', 'CreateController@new')->name('new');
