@@ -3,25 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use  App\SMS\SMS;
 class SendController extends Controller
 {
-        public function send(Request $request){
+    public function send(Request $request){
 
-    	include(app_path() . '\SMS.php');
+        $sms = new SMS();
+        $userID=""; //發送帳號
+        $password="";   //發送密碼
+        $subject = "";
+        $content = $request->input('text');
+        $mobile = $request->input('phone');
+        $sendTime= "";
 
-    	$smsArray = $request->input('phone');
+        if($sms->sendSMS($userID,$password,$subject,$content,$mobile,$sendTime)){
 
-    	$smsArray = explode(',',$smsArray);
+            $url = $request->input('url');
+            settype($url, "string");
 
-    	$content = $request->input('text');
+            return redirect($url);
 
-    	$url = $request->input('url');
+        } else {
+            echo "傳送簡訊失敗，" . $sms->processMsg . "<br />";
+        }
 
-    	settype($url, "string");
-
-    	SendSMS($subject,$content,$sendtime,$smsArray);
-
-    	return redirect($url);
     }
 }
