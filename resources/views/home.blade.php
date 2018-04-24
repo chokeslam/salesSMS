@@ -83,13 +83,13 @@
                         <td>{{$value->date}}</td>
                         <td>
                             @if ($value->status =='N')
-                                <a class="btn btn-link" role="btn" href="{{url('edit/paid/'.$value->id)}}" style="padding-top: 0;padding-bottom: 0;">已繳費</a>
+                                <a class="btn btn-link" role="btn" href="{{url('edit/paid/'.$value->id)}}" style="padding-top: 0;padding-bottom: 0;">已預報</a>
                             @endif
                             
                         </td>
                         <td>
                             @if ($value->status =='N' || $value->status =='Y')
-                            <a class="btn btn-link" role="btn" href="{{url('edit/signup/'.$value->id)}}"  style="padding-top: 0;padding-bottom: 0;">已報名</a>
+                            <a class="btn btn-link" role="btn" href="{{url('edit/signup/'.$value->id)}}"  style="padding-top: 0;padding-bottom: 0;">已繳清</a>
                             @endif
                             
                         </td>
