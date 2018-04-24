@@ -49,7 +49,7 @@
             <form action="{{url('Send')}}" method="POST">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
             <div>
-            <table class="table table-sm table-hover table-fixed" id='tables'>
+            <table class="table table-sm table-hover table-fixed" id='tables' style="width:100%">
 
                 <thead>
 
@@ -59,6 +59,7 @@
                         <th>類別</th>
                         <th>學校名稱</th>
                         <th>科系</th>
+                        <th>年級</th>
                         <th>電話</th>
                         <th>加入時間</th>
                         <th></th>
@@ -77,6 +78,7 @@
                         <td>{{$value->class}}</td>
                         <td>{{$value->school}}</td>
                         <td>{{$value->department}}</td>
+                        <td>{{$value->grades}}</td>
                         <td>{{$value->phone}}</td>
                         <td>{{$value->date}}</td>
                         <td>
@@ -95,12 +97,13 @@
                     
                 @endforeach
                 </tbody>
-                <tfoot>
+                <tfoot style="width: 100%">
                         <th></th>
                         <th>學生姓名</th>
                         <th>類別</th>
                         <th>學校名稱</th>
                         <th>科系</th>
+                        <th>年級</th>
                         <th>電話</th>
                         <th>加入時間</th>
                         <th></th>

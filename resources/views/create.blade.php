@@ -49,6 +49,14 @@
 						</div>
 
 						<div class="form-group row">
+							<label for="grade" class="col-sm-4 col-form-label text-md-right">{{ __('年級:') }}</label>
+
+							<div class="col-md-6">
+								<input id="grade" class="form-control" name="grade" required>
+							</div>
+						</div>
+
+						<div class="form-group row">
 							<label for="phone" class="col-sm-4 col-form-label text-md-right">{{ __('電話:') }}</label>
 
 							<div class="col-md-6">

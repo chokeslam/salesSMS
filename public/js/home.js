@@ -91,15 +91,13 @@ $(document).ready(function() {
 		return phone.slice(0,-1);
 	};
 
-	//搜尋框
-	for(i=1;i< 7;i++){
+	for(i=1;i< 8;i++){
 
 		var title = $('table tfoot th').eq(i).text();
 
-		$('#tables tfoot th').eq(i).html('<input type="text" class="search" placeholder="搜尋 '+title+'" />');
+		$('#tables tfoot th').eq(i).html('<input type="text" placeholder="搜尋 '+title+'"style="width: 100%;text-align:center" />');
 
 	}
-
 
 	//datatables 初始化 設定
 	var table = $('#tables').DataTable( {
@@ -131,8 +129,24 @@ $(document).ready(function() {
        		},
 
 		dom:'Brt<"bottom"i>',
+		"ordering": false,
+		"autoWidth": false,
 
-		"scrollY":        "220px",
+		"columnDefs": [
+			{ "width": "1%", "targets": 0 },
+			{ "width": "10%", "targets": 1 },
+			{ "width": "5%", "targets": 2 },
+			{ "width": "10%", "targets": 3 },
+			{ "width": "10%", "targets": 4 },
+			{ "width": "5%", "targets": 5 },
+			{ "width": "10%", "targets": 6 },
+			{ "width": "10%", "targets": 7 },
+			{ "width": "5%", "targets": 8 },
+			{ "width": "5%", "targets": 9 }
+
+		],
+
+		"scrollY":        "300px",
 
 		"scrollX": true,
 

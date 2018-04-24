@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 </head>
 <body  style="font-family:Microsoft JhengHei;">
     <div id="app">
@@ -74,10 +75,12 @@
         </main>
     </div>
 
-<script type="text/javascript" src="{{ URL::asset('js/jquery-3.3.1.js')}}"></script>
-<script type="text/javascript" src="{{ URL::asset('js/jquery.dataTables.js')}}"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{{ URL::asset('js/home.js')}}"></script>
+<script src="{{ asset('js/jquery-3.3.1.js') }}" defer></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ asset('js/jquery.dataTables.min.js') }}" defer></script>
+<script src="{{ asset('js/dataTables.bootstrap4.min.js') }}" defer></script>
+
+<script src="{{ URL::asset('js/home.js')}}" defer></script>
 
 </body>
 </html>

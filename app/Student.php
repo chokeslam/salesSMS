@@ -10,5 +10,5 @@ class Student extends Model
 	
 	protected	$primaryKey = 'id';
 	
-	protected	$fillable   = ['name','class','school','department','phone','status','admin','date'];
+	protected	$fillable   = ['name','class','school','department','grades','phone','status','admin','date'];
 }

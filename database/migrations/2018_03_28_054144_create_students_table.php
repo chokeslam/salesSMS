@@ -19,6 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('class');
             $table->string('school');
             $table->string('department');
+            $table->string('grades');
             $table->string('phone');
             $table->string('status');
             $table->string('admin');

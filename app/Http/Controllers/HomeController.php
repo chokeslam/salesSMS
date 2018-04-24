@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')->where('admin',$user)->get();
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')->where('admin',$user)->get();
         return view('home' , compact('query','user'));
 
     }
@@ -34,7 +34,7 @@ class HomeController extends Controller
     public function paid(){
         
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')
         ->where('status','Y')
         ->where('admin',$user)
         ->get();
@@ -45,7 +45,7 @@ class HomeController extends Controller
     public function unpaid(){
         
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')
         ->where('status','N')
         ->where('admin',$user)
         ->get();
@@ -56,7 +56,7 @@ class HomeController extends Controller
     public function signup(){
         
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')
         ->where('status','S')
         ->where('admin',$user)
         ->get();
@@ -80,7 +80,7 @@ class HomeController extends Controller
     public function Transfer()
     {
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')->where('class','轉學考')->get();
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')->where('class','轉學考')->get();
         return view('home' , compact('query','user'));
 
     }
@@ -88,7 +88,7 @@ class HomeController extends Controller
     public function Engineering()
     {
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')->where('class','工研')->get();
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')->where('class','工研')->get();
         return view('home' , compact('query','user'));
 
     }
@@ -96,7 +96,7 @@ class HomeController extends Controller
     public function Business()
     {
         $user = Auth::user()->name;
-        $query = Student::select('id','name','class','school','department','phone','status','date')->where('class','商研')->get();
+        $query = Student::select('id','name','class','school','department','grades','phone','status','date')->where('class','商研')->get();
         return view('home' , compact('query','user'));
 
     }
