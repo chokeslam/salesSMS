@@ -7,11 +7,11 @@
 
                 <a class="btn btn-outline-primary" id="all" role="btn" href="{{url('home')}}">全部</a>
 
-                <a class="btn btn-outline-primary" id="paid" role="btn" href="{{url('home/paid')}}">已繳費</a>
+                <a class="btn btn-outline-primary" id="paid" role="btn" href="{{url('home/paid')}}">已預報</a>
 
-                <a class="btn btn-outline-primary" id="unpaid" role="btn" href="{{url('home/unpaid')}}">未繳費</a>
+                <a class="btn btn-outline-primary" id="unpaid" role="btn" href="{{url('home/unpaid')}}">未預報</a>
 
-                <a class="btn btn-outline-primary" id="signup" role="btn" href="{{url('home/sign-up')}}">已報名</a>
+                <a class="btn btn-outline-primary" id="signup" role="btn" href="{{url('home/sign-up')}}">已繳清</a>
 
             </div>
 
